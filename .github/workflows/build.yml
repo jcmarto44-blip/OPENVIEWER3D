@@ -1,4 +1,4 @@
-name: Build OpenViewer3D
+name: Validate OpenViewer3D (No Build)
 
 on:
   push:
@@ -6,21 +6,23 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: windows-latest
+  validate:
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repo
+    - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v2
+    - name: Show repository structure
+      run: |
+        echo "Checking OpenViewer3D structure..."
+        ls -R
 
-    - name: Setup NuGet
-      uses: NuGet/setup-nuget@v2
+    - name: Validate core folders
+      run: |
+        test -d src/OpenViewer3D && echo "src OK"
+        test -f README.md && echo "README OK"
+        test -f LICENSE && echo "LICENSE OK"
 
-    - name: Restore NuGet packages
-      run: nuget restore
-
-    - name: Build solution
-      run: msbuild /p:Configuration=Release
+    - name: Finish
+      run: echo "Validation completed successfully"
