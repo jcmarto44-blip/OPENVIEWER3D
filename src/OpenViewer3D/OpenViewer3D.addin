@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>OpenViewer3D</Name>
+    <Assembly>OpenViewer3D.dll</Assembly>
+    <AddInId>F1A0A0B0-1111-2222-3333-444455556666</AddInId>
+    <FullClassName>OpenViewer3D.App</FullClassName>
+    <VendorId>OBRA360</VendorId>
+    <VendorDescription>OpenViewer3D Revit Plugin</VendorDescription>
+  </AddIn>
+</RevitAddIns>
