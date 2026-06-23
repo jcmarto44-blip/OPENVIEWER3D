@@ -19,6 +19,11 @@
       <HintPath>C:\Program Files\Autodesk\Revit 2024\RevitAPIUI.dll</HintPath>
       <Private>false</Private>
     </Reference>
+
+    <Reference Include="RevitServices">
+      <HintPath>C:\Program Files\Autodesk\Revit 2024\RevitServices.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
   </ItemGroup>
 
 </Project>
